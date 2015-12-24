@@ -5,33 +5,22 @@ A plugin to AR-Webflight that allows you to view and control the quadcopter with
 
 This is a plugin that allows you to control your ARdrone with a Oculus Rift. This was created at VThacks, 4/2014: http://challengepost.com/software/riftdrone
 
-Heavily referenced Oculus-drone by Diego Araos.
+Heavily referenced ardrone-webflight: https://github.com/eschnou/ardrone-webflight
 
 I've borrowed his instructions as well.
 
 
-0.replace pilot and video-stream folders in your plugin folder with mine. You can use my HUD folder too, which is slightly better for Oculus use.
+git clone https://github.com/eschnou/ardrone-webflight.git
+cd ardrone-webflight
+npm install
+bower install
 
+Copy over our repository's hud, pilot, and video stream folders.
 
-I don't know how to rename them, and I no longer have access to a drone so I can't test, so this is finished until I someday buy one. 
-
-
-1. npm install
-
-
-2. bower install
-
-
-3. coffee -wc -o . .
-
-
-4. Download and run oculus-rest server (https://github.com/possan/oculus-rest)
-
-
-5. node .
-
-
-6. Go to your browser http://localhost:3000/
+Copy the config.js.sample to config.js and edit to select your plugins
+Connect to the drone's wifi
+Run node app.js
+Point your browser to http://localhost:3000/
 
 
 Controls are the same as the pilot plugin, only controls are overwritten by headmotions. 
